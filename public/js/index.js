@@ -1,15 +1,22 @@
+import '@babel/polyfill'
+import { displayMap } from './mapbox'
 import { login, logout } from './login'
 import { updateSettings } from './updateSettings'
 import { bookTour } from './stripe'
 
 // DOM ELEMENTS
+const mapBox = document.getElementById('map')
 const loginForm = document.querySelector('#login')
 const logoutBtn = document.querySelector('.nav__el--logout')
 const updateUserDataForm = document.querySelector('#updateUserData')
 const updateUserPasswordForm = document.querySelector('#updatePassword')
 const bookBtn = document.querySelector('#bookTour')
 
-// VALUES
+// DELEGATION
+if (mapBox) {
+  const locations = JSON.parse(mapBox.dataset.locations)
+  displayMap(locations)
+}
 
 if (loginForm)
   loginForm.addEventListener('submit', (e) => {
