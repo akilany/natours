@@ -158,10 +158,10 @@ tourSchema.pre(/^find/, function (next) {
   next()
 })
 
-tourSchema.post(/^find/, function (docs, next) {
-  console.log(`Query took ${Date.now() - this.start} milliseconds!`)
-  next()
-})
+// tourSchema.post(/^find/, function (docs, next) {
+//   console.log(`Query took ${Date.now() - this.start} milliseconds!`)
+//   next()
+// })
 
 // Populate document with guides data insted of just their IDs
 tourSchema.pre(/^find/, function (next) {

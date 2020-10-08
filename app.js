@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
 const hpp = require('hpp')
 const cookieParser = require('cookie-parser')
+const compression = require('compression')
 // const cors = require('cors')
 
 const tourRouter = require('./routes/tourRouter.js')
@@ -64,6 +65,8 @@ app.use(
     ],
   })
 )
+
+app.use(compression())
 
 // Test Middlewares
 app.use((req, res, next) => {
