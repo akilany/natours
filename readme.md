@@ -1,6 +1,6 @@
 # Natours - Tour Guide Application
 
-[Natours](https://overclocked.herokuapp.com/) is a full-stack tour guide application built using Node.js, Express.js, MongoDB, and Mongoose.
+[Natours](https://natours-tour-guide.herokuapp.com/) is a full-stack tour guide application built using Node.js, Express.js, MongoDB, and Mongoose.
 
 The API comes with many features starting with authenticating users to access, book, and review tours
 
